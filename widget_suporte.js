@@ -12,6 +12,8 @@ $(function() {
         etoken = document.querySelector('meta[name=etoken]').content;
         utoken = document.querySelector('meta[name=utoken]').content;
     }
+    
+    var welcomeSize = '1rem', titleSize = '1.5rem', textSize = '12px', buttonSize = '1rem';
 
     $body.ready(function() {
         $body.append(`<div style="position: fixed; left: 1%; bottom: 2%; width: 60px; height: 60px; background-color: #383838; cursor: pointer; border-radius: 50%; z-index: 1010;" id="help-desk-modal"><img src="https://i.imgur.com/PMoGpN8.png" style="width: 35px; height: 35px; margin: 12px;"></div>`)
@@ -62,18 +64,18 @@ $(function() {
                     <div class="col-md-12 text-center mb-4">
                         <a href="javascript: void(0);" class="close-support float-right text-dark font-14"><i class="fas fa-times"></i></a>
                         <img src="https://i.imgur.com/dUdbKFe.png" alt="" class="mb-2" style="max-width: 220px;">
-                        <p class="text-success">Bem vindo ao nosso canal de atendimento.</p>
+                        <p class="text-success" style="font-size: ${welcomeSize}">Bem vindo ao nosso canal de atendimento.</p>
                     </div>
                     <div class="d-flex justify-content-around">
                         <div class="col-md-6 text-center">
-                            <h4 class="mb-4">Wiki oGestor</h4>
-                            <p class="mb-4 text-justify" style="font-size: 13px;">O wiki é um espaço onde criamos artigos explicando processos, tirando dúvidas ou ajudando a resolver problemas comuns e recorrentes que podem acontecer no sistema. Basta usar a barra de pesquisa para procurar por informações relacionadas à sua dúvida ou problema. Procuramos sempre atualizar com as dúvidas/problemas mais frequentes.</p>
-                            <a href="https://wiki.ogestor.com.br" class="btn btn-primary get-support" target="_blank"><i class="fas fa-external-link"></i>&nbsp; Acesse Agora</a>
+                            <h4 class="mb-4" style="font-size: ${titleSize}">Wiki oGestor</h4>
+                            <p class="mb-4 text-justify" style="font-size: ${textSize};">O wiki é um espaço onde criamos artigos explicando processos, tirando dúvidas ou ajudando a resolver problemas comuns e recorrentes que podem acontecer no sistema. Basta usar a barra de pesquisa para procurar por informações relacionadas à sua dúvida ou problema. Procuramos sempre atualizar com as dúvidas/problemas mais frequentes.</p>
+                            <a href="https://wiki.ogestor.com.br" class="btn btn-primary get-support" target="_blank" style="font-size: ${buttonSize};"><i class="fas fa-external-link"></i>&nbsp; Acesse Agora</a>
                         </div>
                         <div class="col-md-6 text-center">
-                            <h4 class="mb-4">Fale com um consultor</h4>
-                            <p class="mb-4 text-justify" style="font-size: 13px;">Se você precisa de uma ajuda mais direta ou não encontrou a sua dúvida no wiki, pode abrir um chamado em nossa central de suporte. Nosso central de suporte está disponível das 08:00 às 18:00 (Horário de Brasília) com técnicos qualificados para ajudar a solucionar as dúvidas/problemas que você possa vir a ter no sistema.</p>
-                            <a href="https://clientes.ogestor.com.br/login/empresa/${etoken}/usuario/${utoken}?redirect=aHR0cHM6Ly9jbGllbnRlcy5vZ2VzdG9yLmNvbS5ici9jaGFtYWRvcy9hZGljaW9uYXI=" class="btn btn-primary get-support" target="_blank"><i class="fas fa-external-link"></i>&nbsp; Abrir chamado</a>
+                            <h4 class="mb-4" style="font-size: ${titleSize}">Fale com um consultor</h4>
+                            <p class="mb-4 text-justify" style="font-size: ${textSize};">Se você precisa de uma ajuda mais direta ou não encontrou a sua dúvida no wiki, pode abrir um chamado em nossa central de suporte. Nosso central de suporte está disponível das 08:00 às 18:00 (Horário de Brasília) com técnicos qualificados para ajudar a solucionar as dúvidas/problemas que você possa vir a ter no sistema.</p>
+                            <a href="https://clientes.ogestor.com.br/login/empresa/${etoken}/usuario/${utoken}?redirect=aHR0cHM6Ly9jbGllbnRlcy5vZ2VzdG9yLmNvbS5ici9jaGFtYWRvcy9hZGljaW9uYXI=" class="btn btn-primary get-support" target="_blank" style="font-size: ${buttonSize};"><i class="fas fa-external-link"></i>&nbsp; Abrir chamado</a>
                         </div>
                     </div>
                 </div>
