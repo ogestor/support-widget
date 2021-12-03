@@ -13,13 +13,13 @@ $(function() {
         utoken = document.querySelector('meta[name=utoken]').content;
     }
     
-    var imageSize = '220px', welcomeSize = '1rem', titleSize = '1.5rem', textSize = '14px', buttonSize = '1rem';
+    var imageSize = '220px', welcomeSize = '1rem', titleSize = '1.5rem', textSize = '13px', buttonSize = '1rem';
     var domain = location.host.split('.')[0];
     if(['localhost:1910', 'pdv', 'emissor', 'sistema', 'erp'].indexOf(domain) !== -1) {
         imageSize = '205px';
         welcomeSize = '0.9rem';
         titleSize = '1.3rem';
-        textSize = '13px';
+        textSize = '12px';
         buttonSize = '0.9rem';
     }
 
