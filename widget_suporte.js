@@ -13,7 +13,7 @@ $(function() {
         utoken = document.querySelector('meta[name=utoken]').content;
     }
 
-    window.addEventListener('DOMContentLoaded', function() {
+    $body.ready(function() {
         $body.append(`<div style="position: fixed; left: 1%; bottom: 2%; width: 60px; height: 60px; background-color: #383838; cursor: pointer; border-radius: 50%; z-index: 1010;" id="help-desk-modal"><img src="https://i.imgur.com/PMoGpN8.png" style="width: 35px; height: 35px; margin: 12px;"></div>`)
             .append(`
                 <iframe id="iframe-support" style="position: fixed; top: 25%; left: 30%; border-radius:15px; width: 40%; display: none; z-index: 1116;"></iframe>
