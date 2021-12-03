@@ -13,7 +13,15 @@ $(function() {
         utoken = document.querySelector('meta[name=utoken]').content;
     }
     
-    var welcomeSize = '1rem', titleSize = '1.5rem', textSize = '12px', buttonSize = '1rem';
+    var imageSize = '220px', welcomeSize = '1rem', titleSize = '1.5rem', textSize = '14px', buttonSize = '1rem';
+    var domain = location.host.split('.')[0];
+    if(['pdv', 'emissor', 'sistema', 'erp'].indexOf(domain) !== -1) {
+        imageSize = '205px';
+        welcomeSize = '0.9rem';
+        titleSize = '1.3rem';
+        textSize = '12px';
+        buttonSize = '0.9rem';
+    }
 
     $body.ready(function() {
         $body.append(`<div style="position: fixed; left: 1%; bottom: 2%; width: 60px; height: 60px; background-color: #383838; cursor: pointer; border-radius: 50%; z-index: 1010;" id="help-desk-modal"><img src="https://i.imgur.com/PMoGpN8.png" style="width: 35px; height: 35px; margin: 12px;"></div>`)
@@ -63,7 +71,7 @@ $(function() {
                 <div class="p-3">
                     <div class="col-md-12 text-center mb-4">
                         <a href="javascript: void(0);" class="close-support float-right text-dark font-14"><i class="fas fa-times"></i></a>
-                        <img src="https://i.imgur.com/dUdbKFe.png" alt="" class="mb-2" style="max-width: 220px;">
+                        <img src="https://i.imgur.com/dUdbKFe.png" alt="" class="mb-2" style="max-width: ${imageSize};">
                         <p class="text-success" style="font-size: ${welcomeSize}">Bem vindo ao nosso canal de atendimento.</p>
                     </div>
                     <div class="d-flex justify-content-around">
